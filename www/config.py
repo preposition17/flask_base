@@ -1,12 +1,14 @@
 import os
 from dotenv import load_dotenv
 
+from paths import ENV_FILE
+
 
 basedir = os.path.abspath(os.path.dirname(__file__))
 
 
-class Config(object):
-    load_dotenv()
+class Config:
+    load_dotenv(ENV_FILE)
 
     # Main configs
     DEBUG = False
